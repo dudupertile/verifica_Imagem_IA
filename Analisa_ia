@@ -1,0 +1,23 @@
+import tkinter as tk
+from tkinter import filedialog
+import requests
+from PIL import Image
+import numpy as np
+import tensorflow as tf
+
+def analisar_imagem():
+    # ... (resto da função)
+    resultado = identificar_imagem(url)
+    resultado_label.config(text="A imagem é: " + resultado)
+
+    # Criar os botões de feedback
+    correto_button = tk.Button(root, text="Correto", command=lambda: marcar_feedback("correto"))
+    incorreto_button = tk.Button(root, text="Incorreto", command=lambda: marcar_feedback("incorreto"))
+    correto_button.pack()
+    incorreto_button.pack()
+
+def marcar_feedback(resultado):
+    # Aqui você implementaria a lógica para salvar o feedback
+    # Por exemplo, salvar em um arquivo CSV ou enviar para uma base de dados
+    print(f"O usuário marcou a previsão como {resultado}")
+    # ... (sua lógica para salvar o feedback)
